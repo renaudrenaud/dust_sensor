@@ -10,7 +10,7 @@ We want to use the Raspberry to read data from Arduino and do some "high level" 
 Let's see where we can go! 
 
 
-## Connections
+## Arduino Connections
 
 The Sharp sensor is very often sold with some 8 connectors and you have to add a resistor and a capacitor.
 The Waveshare module save your time and patience, offering a back pack with 4 prins:
@@ -26,7 +26,7 @@ Arduino / Sharp sensor connections:
 * D7    -   ILED
 
 
-## postgresql
+## Installing / starting Postgresql on PI400 with Ubuntu 20.4 64 bits OS
 
 Ya another difficult start... Anyway
 
@@ -63,6 +63,16 @@ psql -U postgres
 ALTER user postgres with password 'postgres';
 
 ```
+
+## Installing / Starting DBeaver on the PI
+
+* Download the ARM version from (https://dbeaver.io/download/)[https://dbeaver.io/download/]
+* unzip
+* run the debeaver from the unzipped folder
+
+
+
+
 
 
 
