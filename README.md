@@ -14,13 +14,13 @@ Let's see where we can go!
 
 The Sharp sensor is very often sold with some 8 connectors and you have to add a resistor and a capacitor.
 The Waveshare module save your time and patience, offering a back pack with 4 prins:
-1 - VCC
-2 - GND
-3 - AOUT - This is the analog out to read the measure
-4 - ILED - This pin is an input, allowing to control the LED inside the captor
+1. VCC
+2. GND
+3. AOUT - This is the analog out to read the measure
+4. ILED - This pin is an input, allowing to control the LED inside the captor
 
-Arduino / Sharp sensor
-VCC   -   VCC
-GND   -   GND
-A0    -   AOUT
-D7    -   ILED
+Arduino / Sharp sensor connections:
+* VCC   -   VCC
+* GND   -   GND
+* A0    -   AOUT
+* D7    -   ILED
