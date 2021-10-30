@@ -24,3 +24,48 @@ Arduino / Sharp sensor connections:
 * GND   -   GND
 * A0    -   AOUT
 * D7    -   ILED
+
+
+## postgresql
+
+Ya another difficult start... Anyway
+
+install postgres
+
+```sudo apt install postgresql```
+
+then run it
+
+```pg_ctlcluster 13 main start```
+
+
+modify the file
+```/etc/postgresql/13/main$ sudo nano pg_hba.conf```
+
+with
+```
+# Database administrative login by Unix domain socket
+local   all             postgres                                trust
+```
+stop pg and restart it
+```
+pg_ctlcluster 13 main stop
+pg_ctlcluster 13 main start
+```
+
+
+
+log from the cli into postgres
+define a password for the default user
+
+```
+psql -U postgres
+ALTER user postgres with password 'postgres';
+
+```
+
+
+
+
+
+
