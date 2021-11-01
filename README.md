@@ -87,9 +87,42 @@ ALTER user postgres with password 'postgres';
 
 ## Installing / Starting DBeaver on the PI
 
-* Download the ARM version from (https://dbeaver.io/download/)[https://dbeaver.io/download/]
+* Download the ARM version from [https://dbeaver.io/download/](https://dbeaver.io/download/)
 * unzip
 * run the debeaver from the unzipped folder
+
+
+
+
+## Grafana
+
+The most difficult task is to find where to get the Raspberry Pi version.
+
+It's [here](https://grafana.com/grafana/download?platform=arm)
+
+just execute these commands :
+
+```
+sudo apt-get install -y adduser libfontconfig1
+wget https://dl.grafana.com/enterprise/release/grafana-enterprise_8.2.2_armhf.deb
+sudo dpkg -i grafana-enterprise_8.2.2_armhf.deb
+```
+After the last command read carrefully the output, you will find instructions to:
+* make grafana running at reboot
+* run grafana
+
+Then few points:
+* first run at localhost:3000 will ask for password: admin, admin
+* check on the parameters the settings for time zone to avoid some surprise
+* when connecting to Postrgesql play with security parameters to be able to connect and request
+
+
+
+
+
+
+
+
 
 
 
