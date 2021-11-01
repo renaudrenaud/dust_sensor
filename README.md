@@ -47,6 +47,22 @@ with
 # Database administrative login by Unix domain socket
 local   all             postgres                                trust
 ```
+
+Allowing lan connections requires modifying the config_file:
+
+Find it with
+
+```
+psql -U postgres -c 'SHOW config_file'
+```
+
+then add 
+```listen '*'```
+for TCP/IP listening
+
+
+
+
 stop pg and restart it
 ```
 pg_ctlcluster 13 main stop
@@ -63,6 +79,11 @@ psql -U postgres
 ALTER user postgres with password 'postgres';
 
 ```
+
+
+
+
+
 
 ## Installing / Starting DBeaver on the PI
 
