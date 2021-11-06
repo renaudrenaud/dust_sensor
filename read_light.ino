@@ -22,6 +22,8 @@ I/O define
 */
 const int iled = 7;                                            //drive the led of sensor
 const int vout = 0;                                            //analog input
+const int mq135 = 1;
+int sensorValue; 
 
 /*
 variable
@@ -102,6 +104,8 @@ void loop(void)
   }
   else
     density = 0;
+
+  sensorValue = analogRead(mq135);
     
   /*
   display the result
@@ -109,6 +113,14 @@ void loop(void)
   Serial.print("The current dust concentration is: ");
   Serial.print(density);
   Serial.print(" ug/m3\n");  
+  Serial.print("MQ135 analog read: ");
+  Serial.print(sensorValue, DEC);
+  Serial.print("\n");
+
+
+
+  
   
   delay(1000);
 }
+
