@@ -38,9 +38,18 @@ then run it
 
 ```pg_ctlcluster 13 main start```
 
+Note it could be different depending o nyour version, ie:
+
+```pg_ctlcluster 13 main start```
+
+
 
 modify the file
-```/etc/postgresql/13/main$ sudo nano pg_hba.conf```
+```/etc/postgresql/13/main/pg_hba.conf```
+
+or 
+
+```/etc/postgresql/11/main/pg_hba.conf```
 
 with
 ```
